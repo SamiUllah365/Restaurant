@@ -3,7 +3,7 @@ import React from 'react'
 const MenuSideBar = () => {
     return (
         <>
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div className="offcanvas offcanvas-start" data-bs-scroll="true" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div className="offcanvas-header text-center">
                     <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel" >
                         <img src="https://order.taus.pk/static/media/category_drawer_icon.da7fe4cbea3af87234c7c87e7357a6c8.svg" width="40px" height="22px" alt="" />

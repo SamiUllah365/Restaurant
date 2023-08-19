@@ -41,7 +41,7 @@ const Nav = (props) => {
                                     <img src="https://order.taus.pk/static/media/cart.380c09a31a9df5320499819baae9cc12.svg" width="30px" alt="" style={{ marginRight: "7px" }} />
                                     {props.counter} <span className="vertical"></span>
                                     <span style={{marginRight: "5px"}}><img src="https://order.taus.pk/static/media/wallet.7c6e69440249d7c028a893e6bba16ac9.svg" alt="" /></span>
-                                    <span>Rs. </span>
+                                    <span>Rs.{props.cartTotalPrice} </span>
                                 </a>
                                 }
                             </li>

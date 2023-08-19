@@ -3,7 +3,7 @@ import React from 'react'
 const CartBtn = (props) => {
     return (
         <>
-            <div className="offcanvas offcanvas-end" tabindex="0" id="offcanvasCart" aria- labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-end" id="offcanvasCart" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
                         <img src="https://order.taus.pk/static/media/shopping-cart.1d948932c583709f57addf65be51f497.svg" alt="" /> Your cart
@@ -19,17 +19,22 @@ const CartBtn = (props) => {
                                 <th>Quantity</th>
                                 <th>Amount</th>
                             </tr>
-                            <tr>
-                                {
-                                    props.addItem.map(item => {
-                                        <>
+                            {
+                                props.counter > 0 &&
+                                props.addItem.map(item => (
+                                    <>
+                                        <tr key={item.Id} style={{fontSize: "20px", marginBottom: "10px"}}>
                                             <td>{item.Title}</td>
-                                            <td>{item.Quantity}</td>
+                                            <td style={{ borderRadius: "50px" }}>
+                                                <a href='#' onClick={() => props.handleRemoveToProduct(item)} style={{float: "left" , marginLeft: "10px"}}>-</a>
+                                                {item.Quantity}
+                                                <a href='#' onClick={() =>props.handleAddToProduct(item)} style={{float: "right", marginRight: "10px"}}>+</a>
+                                            </td>
                                             <td>{item.Pri}</td>
-                                        </>
-                                    })
-                                }
-                            </tr>
+                                        </tr>
+                                    </>
+                                ))
+                            }
                         </tbody>
                     </table>
                     {

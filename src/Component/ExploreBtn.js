@@ -1,37 +1,52 @@
 import React from 'react'
 
-const ExploreBtn = () => {
+const ExploreBtn = (props) => {
     return (
         <>
-            <div className="offcanvas offcanvas-end" tabindex="0" id="offcanvasExplore" aria-labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-end" id="offcanvasExplore" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel"></h5>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
                     <table>
-                        <tbody>
-                            <tr>
-                                <td><img src="https://order.taus.pk/static/media/home.f8748bfe204ca1920c734af26c434095.svg" alt="" /> Home</td>
-                            </tr>
-                            <hr />
-                            <tr>
-                                <td><img src="https://order.taus.pk/static/media/shopping-cart.1d948932c583709f57addf65be51f497.svg" alt="" /> Cart</td>
-                            </tr>
-                            <hr />
-                            <tr>
-                                <td><img src="https://order.taus.pk/static/media/profile.fd22346f92628ec966f09fe0334eae22.svg" alt="" /> My Profile</td>
-                            </tr>
-                            <hr />
-                            <tr>
-                                <td><img src="https://order.taus.pk/static/media/shopinginfo.bdcc9d985f2cdca9293c48ff3d2f8d15.svg" alt="" /> Shopping Info</td>
-                            </tr>
-                            <hr />
-                            <tr>
-                                <td><img src="https://order.taus.pk/static/media/contact.1d2642b9d149b3d93ea46e7e834f5ff2.svg" alt="" /> Contact us</td>
-                            </tr>
-                            <hr />
-                        </tbody>
+                        <tr>
+                            <th>
+                                <a href='#'><img src="https://order.taus.pk/static/media/home.f8748bfe204ca1920c734af26c434095.svg" alt="" /> Home</a>
+                            </th>
+                        </tr>
+                        <hr />
+                        <tr>
+                            <th>
+                                <a href='#'><img src="https://order.taus.pk/static/media/shopping-cart.1d948932c583709f57addf65be51f497.svg" alt="" /> Cart</a>
+                            </th>
+                            <th>Item</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>{props.counter}</td>
+                            <td>Rs. {props.cartTotalPrice}</td>
+                        </tr>
+                        <hr />
+                        <tr>
+                            <th>
+                                <a href='#'><img src="https://order.taus.pk/static/media/profile.fd22346f92628ec966f09fe0334eae22.svg" alt="" /> My Profile</a>
+                            </th>
+                        </tr>
+                        <hr />
+                        <tr>
+                            <th>
+                                <a href='#'><img src="https://order.taus.pk/static/media/shopinginfo.bdcc9d985f2cdca9293c48ff3d2f8d15.svg" alt="" /> Shopping Info</a>
+                            </th>
+                        </tr>
+                        <hr />
+                        <tr>
+                            <th>
+                                <a href='#'><img src="https://order.taus.pk/static/media/contact.1d2642b9d149b3d93ea46e7e834f5ff2.svg" alt="" /> Contact us</a>
+                            </th>
+                        </tr>
+                        <hr />
                     </table>
                 </div>
                 <div className="container-fluid text-center">

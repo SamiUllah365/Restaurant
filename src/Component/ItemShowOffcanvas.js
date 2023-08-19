@@ -3,7 +3,7 @@ import React from 'react'
 const ItemShowOffcanvas = (props) => {
     return (
         <>
-            <div className="offcanvas offcanvas-end" tabindex="0" id="ItemShowOffcanvas" aria- labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-end" id="ItemShowOffcanvas" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
                     </h5>
@@ -18,6 +18,9 @@ const ItemShowOffcanvas = (props) => {
                     </div>
                     <hr />
                     <div className="container">
+                        <p>{props.showItem.Drs}</p>
+                    </div>
+                    <div className="container">
                         <h5> Special instructions </h5>
                         <p>  Any specific preferences? Let us know.</p>
                         <input className='inputI' type="text" style={{ width: "350px", height: "60px", padding: "5px", borderRadius: "10px" }} placeholder='Add Special instruction here' />
@@ -27,7 +30,7 @@ const ItemShowOffcanvas = (props) => {
                     <span><button style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>-</button></span>
                     <span style={{ marginLeft: "15px" }}>{props.showItem.Quantity}</span>
                     <span><button style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>+</button></span>
-                    <button className='addToCart' onClick={() => (props.addToCart(props.showItem))}
+                    <button className='addToCart' data-bs-dismiss="offcanvas" onClick={() => (props.addToCart(props.showItem))}
                         style={{ float: "right", backgroundColor: "#ffa600", borderColor: "#ffa600", width: "200px", height: "40px", color: "white" }}>Add To Cart
                         <img style={{ marginLeft: "10px" }} src="https://order.taus.pk/static/media/arrow-left.28c7f59e5690d0e7862cdd3d2e625133.svg" alt="" />
                     </button>
