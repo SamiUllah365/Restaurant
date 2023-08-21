@@ -27,9 +27,9 @@ const ItemShowOffcanvas = (props) => {
                     </div>
                 </div>
                 <div className="container-fluid">
-                    <span><button style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>-</button></span>
+                    {/* <span><button onClick={() => props.handleRemoveToProduct(props.showItem)} style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>-</button></span>
                     <span style={{ marginLeft: "15px" }}>{props.showItem.Quantity}</span>
-                    <span><button style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>+</button></span>
+                    <span><button onClick={() => props.handleAddToProduct(props.showItem)} style={{ width: "30px", height: "30px", color: "white", backgroundColor: "#ffa600", borderColor: "#ffa600", borderRadius: "20px", padding: "2px", marginLeft: "15px" }}>+</button></span> */}
                     <button className='addToCart' data-bs-dismiss="offcanvas" onClick={() => (props.addToCart(props.showItem))}
                         style={{ float: "right", backgroundColor: "#ffa600", borderColor: "#ffa600", width: "200px", height: "40px", color: "white" }}>Add To Cart
                         <img style={{ marginLeft: "10px" }} src="https://order.taus.pk/static/media/arrow-left.28c7f59e5690d0e7862cdd3d2e625133.svg" alt="" />

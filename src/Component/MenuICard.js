@@ -21,7 +21,7 @@ const MainMenuItems = (props) => {
                             <div className="row row-cols-2  row-cols-md-4 g-5 ">
                                 {
                                     category.MenuItem.map(items => (
-                                        <div className="mb-3 card-group card-detail col-lg-4 col-md-4 col-6"
+                                        <div className="mb-3 card-group card-detail col-lg-4 col-md-4 col-12"
                                             data-bs-toggle="offcanvas" data-bs-target="#ItemShowOffcanvas" aria-controls="offcanvasWithBothOptions">
                                             <div key={items.Id} className="card p-1" onClick={() =>props.openDetail(items)}>
                                                 <div className="card-body">
@@ -29,7 +29,7 @@ const MainMenuItems = (props) => {
                                                     {/* <a href="#"> */}
                                                     <img src={items.src} className="card-img-top" alt="..." />
                                                     {/* </a> */}
-                                                    <p className="card-text">{truncate(items.Drs, 50)}</p>
+                                                    <p className="card-text description">{truncate(items.Drs, 50)}</p>
                                                 </div>
                                                 <div className="card-foot">
                                                     <h5 className="card-text">Rs {items.Pri}</h5>

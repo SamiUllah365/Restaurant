@@ -18,15 +18,8 @@ const ExploreBtn = (props) => {
                         <hr />
                         <tr>
                             <th>
-                                <a href='#'><img src="https://order.taus.pk/static/media/shopping-cart.1d948932c583709f57addf65be51f497.svg" alt="" /> Cart</a>
+                                <a href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"><img src="https://order.taus.pk/static/media/shopping-cart.1d948932c583709f57addf65be51f497.svg" alt="" /> Cart</a>
                             </th>
-                            <th>Item</th>
-                            <th>Total</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>{props.counter}</td>
-                            <td>Rs. {props.cartTotalPrice}</td>
                         </tr>
                         <hr />
                         <tr>

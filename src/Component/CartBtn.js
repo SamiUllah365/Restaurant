@@ -12,7 +12,7 @@ const CartBtn = (props) => {
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body text-center">
-                    <table style={{ width: "100%" }}>
+                    <table style={{ width: "100%",borderCollapse: 'separate',borderSpacing: '0px 4px' }}>
                         <tbody>
                             <tr style={{ backgroundColor: "#f7f6f5" }}>
                                 <th style={{ width: "50%" }} >Product Name</th>
@@ -23,14 +23,25 @@ const CartBtn = (props) => {
                                 props.counter > 0 &&
                                 props.addItem.map(item => (
                                     <>
-                                        <tr key={item.Id} style={{fontSize: "20px", marginBottom: "10px"}}>
+                                        <tr key={item.Id} style={{ fontSize: "20px", marginBottom: "10px" }}>
                                             <td>{item.Title}</td>
-                                            <td style={{ borderRadius: "50px" }}>
-                                                <a href='#' onClick={() => props.handleRemoveToProduct(item)} style={{float: "left" , marginLeft: "10px"}}>-</a>
+                                            <td style={{ borderRadius: "50px", backgroundColor: "#ffa600" }}>
+                                                {
+                                                    item.Quantity === 1 &&
+                                                    <>
+                                                    <img src="del.svg" alt="" width="20px" height="20px" onClick={() => props.handleRemoveToProduct(item)} style={{ marginTop: "5px",float: "left", marginLeft: "10px"}} />
+                                                    </>
+                                                }
+                                                {
+                                                    item.Quantity > 1 &&
+                                                    <a href='#' onClick={() => props.handleRemoveToProduct(item)} style={{ float: "left", marginLeft: "10px",color: "white" }}>-</a>
+                                                }
                                                 {item.Quantity}
-                                                <a href='#' onClick={() =>props.handleAddToProduct(item)} style={{float: "right", marginRight: "10px"}}>+</a>
+                                                <a href='#' onClick={() => props.handleAddToProduct(item)} style={{ float: "right", marginRight: "10px", color: "white" }}>+</a>
                                             </td>
                                             <td>{item.Pri}</td>
+                                        </tr>
+                                        <tr>
                                         </tr>
                                     </>
                                 ))
@@ -45,6 +56,9 @@ const CartBtn = (props) => {
                             <h2>Your cart is empty.</h2>
                         </div>
                     }
+                </div>
+                <div className="container">
+                    <h5>Grand Total: Rs. {props.cartTotalPrice}</h5>
                 </div>
             </div>
         </>
